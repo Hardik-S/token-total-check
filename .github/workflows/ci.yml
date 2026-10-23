@@ -23,7 +23,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip build
           python -m build --wheel
-          python -m pip install --no-deps dist/*.whl
+          python -m pip install --no-deps dist/token_total_check-0.1.0-py3-none-any.whl
       - name: Run full suite (zero skipped)
         run: python -m unittest discover -s tests -v
       - name: Check installed package and console script outside the source tree
