@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "token-total-check"
+version = "0.1.0"
+description = "Offline checker for normalized token-count arithmetic in synthetic JSONL fixtures"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+classifiers = ["Programming Language :: Python :: 3", "Programming Language :: Python :: 3.10", "Environment :: Console"]
+dependencies = []
+
+[project.scripts]
+token-total-check = "token_total_check.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
